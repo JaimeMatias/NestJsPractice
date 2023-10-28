@@ -84,3 +84,15 @@ const processIdentityImplementation:ProcessIdentity<number,string>=(value,messag
     console.log(message);
     return value
 };
+
+class processorIdentityImplementation<X,Y>{
+  value: X;
+  message: Y;
+  constructor(value:X,message:Y){
+    this.value=value,
+    this.message=message
+  }
+  process(): X {
+    return this.value
+  }
+}
